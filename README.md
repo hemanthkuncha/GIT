@@ -1,3 +1,5 @@
+Java Apache Archive Distribution Directory link = https://www.oracle.com/in/java/technologies/downloads/archive/
+
 java -version 
 
 -------------------
