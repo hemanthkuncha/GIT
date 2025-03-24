@@ -29,6 +29,7 @@ Setup M2_HOME and M2 paths in .bash_profile or .bashrc of user and add these to 
 ```
 #### Check point 
 source ~/.bash_profile  # source
+
 logoff and login to check maven version
 Check maven version 
 ```sh
