@@ -3,15 +3,13 @@ MAVEN Apache Archive Distribution Directory link = https://downloads.apache.org/
 #  Install & configure Maven build tool on Jenkins
 Maven is a code build tool which used to convert your code to artifact. this is widely used plugin to build in continuous integration
 
-#### Follow this artical in **[YouTube](https://www.youtube.com/watch?v=wgfsVmHnAiM)**
-
 #### Prerequisites
 1. Jenkins server **[Get Help Here](https://www.youtube.com/watch?v=M32O4Yv0ANc)
 
 #### Install Maven on Jenkins
-Download maven packages https://maven.apache.org/download.cgi onto Jenkins server. In this case I am using /opt/maven as my installation directory
-	- Link : https://maven.apache.org/download.cgi
-```sh
+Download maven packages = https://downloads.apache.org/maven/ in /opt/maven as my installation directory
+
+```
   # Creating maven directory under /opt
   mkdir /opt/maven
   cd /opt/maven
