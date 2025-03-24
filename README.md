@@ -1,4 +1,4 @@
-HTTPD Apache Archive Distribution Directory link = https://downloads.apache.org/httpd/
+HTTPD Apache Archive Distribution Directory link = https://archive.apache.org/dist/httpd/
 
 HTTPD = Apache Hypertext Transfer Protocol (HTTP) server / HyperText Transfer Protocol Daemon
 
