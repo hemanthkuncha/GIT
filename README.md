@@ -1,13 +1,12 @@
 Java Oracle Archive Distribution Directory link = https://www.oracle.com/in/java/technologies/downloads/archive/
 
 java -version
+
 command -v java
 
 # JAVA installation on EC2 instance
 ### Pre-requisites
 1. EC2 instance with port access-SSH/TCP/22 and what ever services enabled - web/TCP/80-default http port
-2. Need Java ( * ) any version
-
 --------------------------------------------------------
 
 Java followed Legacy versioning untill 1.8=8
