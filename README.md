@@ -1,52 +1,37 @@
-MAVEN Apache Archive Distribution Directory link = https://downloads.apache.org/maven/
+# MAVEN installation on EC2 instance
+### Pre-requisites
+1. EC2 instance with port access-SSH/TCP/22 and what ever services enabled
+2. Need Java ( maven supported ) version
+-------------------------------------------------------
+### Install Apache MAVEN with package managers:
+Debian = sudo apt install maven
 
-#  Install & configure Maven build tool on Jenkins
-Maven is a code build tool which used to convert your code to artifact. this is widely used plugin to build in continuous integration
+Redhat = sudo yum/dnf install maven
 
-#### Prerequisites
-1. Jenkins server **[Get Help Here](https://www.youtube.com/watch?v=M32O4Yv0ANc)
+### Install Apache MAVEN manually:
 
-#### Install Maven on Jenkins
 Download maven packages = https://downloads.apache.org/maven/ in /opt/maven as my installation directory
 
 ```
   # Creating maven directory under /opt
   mkdir /opt/maven
   cd /opt/maven
-  # downloading maven version 3.6.0
-  wget http://mirrors.fibergrid.in/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.zip
-  unzip /opt/maven/apache-maven-3.6.0-bin.zip
+  # downloading maven version 3.8.8
+  wget https://downloads.apache.org/maven/maven-3/3.8.8/source/apache-maven-3.8.8-src.tar.gz
+  unzip /opt/maven/apache-maven-3.8.8-bin.zip
  ```
-	
-Setup M2_HOME and M2 paths in .bash_profile of user and add these to path variable
+Setup M2_HOME and M2 paths in .bash_profile or .bashrc of user and add these to path variable
 ```sh
   vi ~/.bash_profile
-  M2_HOME=/opt/maven/apache-maven-3.6.0
+  M2_HOME=/opt/maven/apache-maven-3.8.8
   M2=$M2_HOME/bin
   PAHT=<Existing_PATH>:$M2_HOME:$M2
 ```
 #### Check point 
+source ~/.bash_profile  # source
 logoff and login to check maven version
 Check maven version 
 ```sh
   mvn –version
 ```
-So far you have completed installation of maven software to support maven plugin on jenkins console. Let's jump onto jenkins to complete remining steps. 
-
-#### Setup maven on jenkins console
-- Install maven plugin without restart  
-  - `Manage Jenkins` > `Jenkins Plugins` > `available` > `Maven Invoker`
-  
-#### (Update) Install "Maven Integration" Plugin as well
-- Install maven Integration Plugin without restart 
-  - `Manage Jenkins` > `Jenkins Plugins` > `available` > `Maven Integration`
-  
-- Configure java path
-  - `Manage Jenkins` > `Global Tool Configuration` > `Maven`
-
-#### Next Steps
-
-- [x] [Configure Users & Groups in Jenkins](https://youtu.be/jZOqcB32dYM)
-- [x] [Secure your Jenkins Server](https://youtu.be/19FmJumnkDc)
-- [x] [Jenkins Plugin Installation](https://youtu.be/p_PqPBbjaZ4)
-- [x] [Jenkins Master-Slave Configuration](https://youtu.be/hwrYURP4O2k)
+So far you have completed installation of maven software
