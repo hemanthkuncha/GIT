@@ -52,7 +52,7 @@ After that restart tomcat services to effect these changes.
    ```sh 
    /opt/tomcat/webapps/host-manager/META-INF/context.xml
    /opt/tomcat/webapps/manager/META-INF/context.xml
-   need to edit both files
+   # need to edit both files
 
    <Valve className="org.apache.catalina.valves.RemoteAddrValve"
          allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />
