@@ -1,2 +1,1 @@
-# NOTE
-About all AWS-DEVOPS
+MAVEN Apache Archive Distribution Directory link = https://downloads.apache.org/maven/
