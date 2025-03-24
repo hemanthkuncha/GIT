@@ -27,7 +27,7 @@ Redhat = sudo yum/dnf install (  java-8-openjdk-amd64  java-11-openjdk-amd64  ja
 ### Install Oracle JAVA manually:
 pending
 
-------------------------------------------------------
+-----------------------------------------------------------------------------------
 
 Set the JAVA_HOME Variable
 Edit your .bash_profile or .bashrc
@@ -36,8 +36,6 @@ nano ~/.bash_profile
 1.sudo update-alternatives --config java ( switching java version using command )
 
 NOTE: in some cases using "alternatives --config java"  for redhat
-
------------------------------------------------------------------------------------
 
 2.add JAVA_HOME path to $PATH ( switching java version using manually setting )
 
@@ -49,8 +47,6 @@ java binary = [/usr/lib/jvm/java-1.8.0-amazon-corretto.x86_64/jre/bin/java]
 
 for java selction - use = [/usr/lib/jvm/java-1.8.0-amazon-corretto.x86_64]
 
------------------------------------------------------------------------------------
-
 { JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
 export JAVA_HOME
@@ -58,5 +54,3 @@ export JAVA_HOME
 PATH=$PATH:$JAVA_HOME  }
 
 source ~/.bash_profile  # source
-
------------------------------------------------------------------------------------
