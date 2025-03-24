@@ -6,7 +6,7 @@ command -v java
 
 # JAVA installation on EC2 instance
 ### Pre-requisites
-1. EC2 instance with port access-SSH/TCP/22 and what ever services enabled - web/TCP/80-default http port
+1. EC2 instance with port access-SSH/TCP/22 and what ever services enabled
 --------------------------------------------------------
 
 Java followed Legacy versioning untill 1.8=8
