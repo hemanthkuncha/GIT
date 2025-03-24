@@ -34,5 +34,6 @@ logoff and login to check maven version
 Check maven version 
 ```sh
   mvn –version
+  command -v mvn
 ```
 So far you have completed installation of maven software
