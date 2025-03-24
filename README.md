@@ -20,7 +20,7 @@ version| name
 -------------------------------------------------------
 
 ### Install Oracle JAVA with package managers:
-Debian = sudo apt install ( java-8-openjdk-amd64  java-11-openjdk-amd64  java-17-openjdk-amd64 )
+Debian = sudo apt install ( java-8-openjdk-jdk  java-11-openjdk-jdk  java-17-openjdk-jdk )
 
 Redhat = sudo yum/dnf install (  java-8-openjdk-amd64  java-11-openjdk-amd64  java-17-openjdk-amd64 ) / java-1.8*
 
