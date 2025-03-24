@@ -13,8 +13,6 @@ Open source
 # HTTPD installation on EC2 instance
 ### Pre-requisites
 1. EC2 instance with port access-SSH/TCP/22 and what ever services enabled - web/TCP/80-default http port
-2. Need httpd ( * ) any version
-
 ### Install Apache HTTPD with package managers:
 Debian = sudo apt-get/apt install apache2
 
