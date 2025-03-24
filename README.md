@@ -3,7 +3,7 @@ Tomcat Apache Archive Distribution Directory link = https://archive.apache.org/d
 # Tomcat installation on EC2 instance
 ### Pre-requisites
 1. EC2 instance with port access-SSH/TCP/22 and what ever services enabled - webservers/TCP/8080-default tomcat port
-2. Need java ( 1.8 ) or any other version
+2. Need java ( compatiable ) version
 ### Install Apache Tomcat
 1. Download tomcat packages from https://archive.apache.org/dist/tomcat/ onto /opt on EC2 instance
    > Note: Make sure you change `<version>` with the tomcat version which you download. 
@@ -47,12 +47,15 @@ Access tomcat application from browser on port 8090
    #search for context.xml
    find / -name context.xml
    ```
-1. above command gives 3 context.xml files. comment (<!-- & -->) `Value ClassName` field on files which are under webapp directory. 
+1. above command gives 3 context.xml files. comment (<!-- & -->) `Value ClassName` field on files which are under webapp directory.
 After that restart tomcat services to effect these changes. 
-At the time of writing this lecture below 2 files are updated. 
    ```sh 
    /opt/tomcat/webapps/host-manager/META-INF/context.xml
    /opt/tomcat/webapps/manager/META-INF/context.xml
+   need to edit both files
+
+   <Valve className="org.apache.catalina.valves.RemoteAddrValve"
+         allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1" />
    
    # Restart tomcat services
    tomcatdown  
@@ -61,13 +64,13 @@ At the time of writing this lecture below 2 files are updated.
 1. Update users information in the tomcat-users.xml file
 goto tomcat home directory and Add below users to conf/tomcat-users.xml file without any spaces infront of lines
    ```sh
-	<role rolename="manager-gui"/>
+   <role rolename="manager-gui"/>
    <role rolename="admin-gui"/>
-	<role rolename="manager-script"/>
-	<role rolename="manager-jmx"/>
-	<role rolename="manager-status"/>
-	<user username="admin" password="admin" roles="manager-gui, roles="admin-gui, manager-script, manager-jmx, manager-status"/>
-	<user username="deployer" password="deployer" roles="manager-script"/>
-	<user username="tomcat" password="tomcat" roles="manager-gui"/>
+   <role rolename="manager-script"/>
+   <role rolename="manager-jmx"/>
+   <role rolename="manager-status"/>
+   <user username="admin" password="admin" roles="manager-gui, roles="admin-gui, manager-script, manager-jmx, manager-status"/>
+   <user username="deployer" password="deployer" roles="manager-script"/>
+   <user username="tomcat" password="tomcat" roles="manager-gui"/>
    ```
 1. Restart serivce and try to login to tomcat application from the browser. This time it should be Successful
