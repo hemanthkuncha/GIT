@@ -1,3 +1,5 @@
+HTTPD Apache Archive Distribution Directory link = https://downloads.apache.org/httpd/
+
 HTTPD = Apache Hypertext Transfer Protocol (HTTP) server / HyperText Transfer Protocol Daemon
 
 httpd is a software program that runs in the background and serves as a web server, handling client requests and delivering web content.
