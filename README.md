@@ -18,7 +18,7 @@ INSTALLATION:
 
 Debian = sudo apt install ( java-8-openjdk-amd64  java-11-openjdk-amd64  java-17-openjdk-amd64 )
 
-Redhat = sudo yum/dnf install (  java-8-openjdk-amd64  java-11-openjdk-amd64  java-17-openjdk-amd64 )
+Redhat = sudo yum/dnf install (  java-8-openjdk-amd64  java-11-openjdk-amd64  java-17-openjdk-amd64 ) / java-1.8*
 
 Set the JAVA_HOME Variable
 Edit your .bash_profile or .bashrc
@@ -31,6 +31,16 @@ NOTE: in some cases using "alternatives --config java"  for redhat
 ====================================================
 
 2.add java home path to $PATH ( switching java version using manually setting )
+
+searching java installed path [ which java , whereis java]
+
+searching java in complete filesystem [ find / -name "java"]
+
+java binary = [/usr/lib/jvm/java-1.8.0-amazon-corretto.x86_64/jre/bin/java]
+
+for java selction - use = [/usr/lib/jvm/java-1.8.0-amazon-corretto.x86_64]
+
+-----------------------------------------------------------------------------------
 
 { JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
