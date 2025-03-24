@@ -25,7 +25,7 @@ Root Directory = /var/www/html
 
 -----------------------------------
 
-config file name = httpd.conf
+config file name = httpd.conf/ports.conf
 
 if port changes needed or any other configuration
 
@@ -35,4 +35,4 @@ some OS need firewall rules allow
 
 --------------------------------------------
 
-check with http://public ip
+check with http://public ip : port
