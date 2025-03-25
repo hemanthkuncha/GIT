@@ -74,3 +74,10 @@ Git can specify which files or parts of your project should be ignored by Git us
 Git will not track files and folders specified in .gitignore. However, the .gitignore file itself IS tracked by Git.
 
 touch .gitignore
+
+git diff = compare changes of working directory with staging area
+
+git diff --staged = compare changes of staging area with local repository
+
+git diff HEAD = compare changes of working directory with local repository
+
