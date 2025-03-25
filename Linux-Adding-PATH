@@ -1,0 +1,17 @@
+###sequence of files bash loads to set PATH variable
+
+For interactive login shells:
+* /etc/profile
+* First matched in order of: ~/.bash_profile, ~/.bash_login, ~/.profile 
+* On shell termination: ~/.bash_logout
+
+For interactive non-login shells:
+* /private/etc/bashrc (usually /etc/bash.bashrc in Linux)
+* ~/.bashrc
+
+---------------------------------------------------------------
+
+####/etc/profile >>> ~/.bash_profile >>> ~/.bash_login >>> ~/.profile >>> ~/.bash_logout
+
+
+.bashrc, .zshrc, or .profile or .bash_profile or .profile
