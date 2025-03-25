@@ -15,3 +15,12 @@ For interactive non-login shells:
 
 
 .bashrc, .zshrc, or .profile or .bash_profile or .profile
+
+--------------------------------------------------------------------
+
+nano ~/.bashrc
+
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64  # change the path as per your Java version
+export PATH=$JAVA_HOME/bin:$PATH
+
+source ~/.bashrc
