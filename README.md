@@ -1,4 +1,5 @@
-#user data 
+#user data
+
 -- used to run any commands/script in the initial stage of EC2 startup
 
 1. It need shebang [ !#/bin/bash ]
