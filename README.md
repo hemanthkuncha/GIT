@@ -64,13 +64,13 @@ After that restart tomcat services to effect these changes.
 1. Update users information in the tomcat-users.xml file
 goto tomcat home directory and Add below users to conf/tomcat-users.xml file without any spaces infront of lines
    ```sh
-   <role rolename="manager-gui"/>
    <role rolename="admin-gui"/>
+   <role rolename="manager-gui"/>
    <role rolename="manager-script"/>
    <role rolename="manager-jmx"/>
    <role rolename="manager-status"/>
-   <user username="admin" password="admin" roles="manager-gui, roles="admin-gui, manager-script, manager-jmx, manager-status"/>
-   <user username="deployer" password="deployer" roles="manager-script"/>
-   <user username="tomcat" password="tomcat" roles="manager-gui"/>
+   <role rolename="admin-script"/>
+   <user username="tomcat" password="tomcat" roles="manager-gui,manager-status,manager-script,manager-jmx,admin-gui"/>
+   <user username="admin" password="admin" roles="admin-script,manager-script,manager-jmx"/>
    ```
 1. Restart serivce and try to login to tomcat application from the browser. This time it should be Successful
