@@ -62,7 +62,7 @@ After that restart tomcat services to effect these changes.
    tomcatup
    ```
 1. Update users information in the tomcat-users.xml file
-goto tomcat home directory and Add below users to conf/tomcat-users.xml file without any spaces infront of lines
+goto tomcat home directory and Add below users to conf/tomcat-users.xml file without any spaces infront of lines & above the <\tomcatusers> line
    ```sh
    <role rolename="admin-gui"/>
    <role rolename="manager-gui"/>
