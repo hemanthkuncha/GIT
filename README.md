@@ -1,83 +1,19 @@
-Git is a popular version control system. It was created by Linus Torvalds in 2005, and has been maintained by Junio Hamano since then.
+for configuring software path , the path should have "bin" folder that script of software/tool.
 
-It is used for:
-> Tracking code changes
-> Tracking who made changes
-> Coding collaboration
+jenkins by default creates its own user "jenkins" with no-password
 
-Git is a tool to work with GitHub
+we cant login to it / if we assign password i dont know what happens
 
-GitHub is the largest host of source code
+##Assigning PATH to EC2 Instance only:
 
-git --version
+this can be system wide or user wide, we can opt my choosing the ~.bash_profile, ~.profile, ~.bashrc, ~.bash_logout
 
-Configure Git:
+nano ~/.bash_profile 
 
-git config --global user.name "w3schools-test"
-git config --global user.email "test@w3schools.com"
+source ~/.bash_profile
 
-----------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------
 
-git clone "https://github.com/w3schools-test/w3schools-test.github.io.git" = for cloning repo
+##Asigning PATH to Jenkins Manually
 
-git remote add origin https://github.com/w3schools-test/hello-world.git = Push Local Repository to GitHub
-
-git push --set-upstream origin master = pushing our master branch to the origin url, and setting it as default remote branch
-
-git init . = initiates git directory
-
-git status
-git add (-a/--all = all )
-git commit -m "any message"
-git status --short = to see the changes in a more compact way
-
-git log = Git Commit Log
-
-git "command" -help
-git help --all
-
-git branch "hello-world-images" = New Git Branch
-git checkout "hello-world-images" = switching/changing branch
-
-git fetch origin = gets all the change history of a tracked branch/repo
-
-git merge origin/master combines the current branch, with a specified branch
-
-git pull origin = update your local repository
-
-git branch -a = see all local and remote branches
-
-git branch -r = see remote branches only
-
-Configuring Remotes:
-
-git remote -v
-
-git remote rename origin upstream
-
-git remote add origin https://github.com/kaijim/w3schools-test.github.io.git
-
-Git Ignore:
-
-When sharing your code with others, there are often files or parts of your project, you do not want to share.
-
-Examples
-
-log files
-temporary files
-hidden files
-personal files
-etc.
-
-Git can specify which files or parts of your project should be ignored by Git using a .gitignore file.
-
-Git will not track files and folders specified in .gitignore. However, the .gitignore file itself IS tracked by Git.
-
-touch .gitignore
-
-git diff = compare changes of working directory with staging area
-
-git diff --staged = compare changes of staging area with local repository
-
-git diff HEAD = compare changes of working directory with local repository
-
+add PATH in Jenkins using web access > http://<PUBLIC IP >:8080  >> NODE CONFIGURATION >>> ENV VARIABLE >>>> Name (PATH+"path we assigned in .bash_profile ") & Value "location to home/bin that we assigned .bash_profile "
