@@ -24,3 +24,8 @@ export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64  # change the path as per yo
 export PATH=$JAVA_HOME/bin:$PATH
 
 source ~/.bashrc
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Adding a Path to the Linux PATH Variable
+
