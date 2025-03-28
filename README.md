@@ -1,1 +1,1 @@
-
+Ansible is an open-source, command-line IT automation software application written in Python, used for provisioning, configuration management, application deployment, and orchestration. It's known for its simplicity, ease of use, and agent-less architecture, relying on SSH for transport
